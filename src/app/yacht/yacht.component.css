@@ -1,0 +1,17 @@
+.yacht-list {
+  width: 320px;
+  /* height: 400px; */
+  background-color: aqua;
+}
+
+@media (min-width: 768px) {
+  .yacht-list {
+    width: 500px;
+  }
+}
+
+@media (min-width: 992px) {
+  .yacht-list {
+    width: 700px;
+  }
+}

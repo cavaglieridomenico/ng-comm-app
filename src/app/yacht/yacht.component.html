@@ -1,3 +1,30 @@
 <div class="container">
-  <h1>Yachts</h1>
+  <main class="flex-column align-center">
+    <h1>Yachts</h1>
+    <section class="yacht-list">
+      <mat-card class="example-card" *ngFor="let yacht of yachtList">
+        <mat-card-header>
+          <mat-card-title> {{ yacht.productName }} </mat-card-title>
+          <mat-card-subtitle>{{ yacht.productTagLine }}</mat-card-subtitle>
+        </mat-card-header>
+        <img mat-card-image src="{{ yacht.productImg }}" alt="productName" />
+        <mat-card-content>
+          <p>
+            {{ yacht.description }}
+          </p>
+        </mat-card-content>
+        <p>Costo giornaliero : {{ yacht.dailyCost }}</p>
+        <p *ngIf="yacht.onOffer">IN OFFERTA</p>
+        <mat-card-actions>
+          <div *ngIf="false">
+            <button mat-button color="accent">EDIT</button>
+          </div>
+          <!-- <button mat-button>SHARE</button> -->
+        </mat-card-actions>
+        <mat-card-footer>
+          <mat-progress-bar mode="indeterminate"></mat-progress-bar>
+        </mat-card-footer>
+      </mat-card>
+    </section>
+  </main>
 </div>

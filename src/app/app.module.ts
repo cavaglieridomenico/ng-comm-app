@@ -11,9 +11,10 @@ import { HomePageComponent } from './home-page/home-page.component';
 import { YachtComponent } from './yacht/yacht.component';
 import { OffersComponent } from './offers/offers.component';
 import { EditYachtComponent } from './edit-yacht/edit-yacht.component';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
-  declarations: [AppComponent, NavbarComponent, HeaderComponent, HomePageComponent, YachtComponent, OffersComponent, EditYachtComponent],
+  declarations: [AppComponent, NavbarComponent, HeaderComponent, HomePageComponent, YachtComponent, OffersComponent, EditYachtComponent, FooterComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,

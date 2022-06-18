@@ -1,0 +1,12 @@
+footer {
+  background-color: green;
+
+  height: 100px;
+}
+
+.logo,
+.user {
+  width: 40px;
+  height: 40px;
+  background-color: cyan;
+}

@@ -9,13 +9,42 @@ body {
   font-family: Roboto, "Helvetica Neue", sans-serif;
 }
 
+/* wrappers  */
+.app {
+  height: 100vh;
+}
+
 .container {
-  height: 100%;
+  /* height: 100%; */
   padding: 0 10%;
+}
+/* wrappers END  */
+
+/* Flex */
+.flex-row {
   display: flex;
   justify-content: space-between;
+}
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.space-between {
+  justify-content: space-between;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.justify-start {
+  justify-content: start;
 }
 
 .align-center {
   align-items: center;
 }
+
+/* Flex END */
