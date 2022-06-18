@@ -7,9 +7,13 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from './material.module';
 import { NavbarComponent } from './navbar/navbar.component';
 import { HeaderComponent } from './header/header.component';
+import { HomePageComponent } from './home-page/home-page.component';
+import { YachtComponent } from './yacht/yacht.component';
+import { OffersComponent } from './offers/offers.component';
+import { EditYachtComponent } from './edit-yacht/edit-yacht.component';
 
 @NgModule({
-  declarations: [AppComponent, NavbarComponent, HeaderComponent],
+  declarations: [AppComponent, NavbarComponent, HeaderComponent, HomePageComponent, YachtComponent, OffersComponent, EditYachtComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
