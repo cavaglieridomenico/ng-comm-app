@@ -12,18 +12,22 @@ body {
 /* wrappers  */
 .app {
   height: 100vh;
+  min-width: 390px;
 }
 
 .container {
-  /* height: 100%; */
   padding: 0 10%;
+}
+
+main {
+  min-height: 80vh;
+  background-color: aquamarine;
 }
 /* wrappers END  */
 
 /* Flex */
 .flex-row {
   display: flex;
-  justify-content: space-between;
 }
 
 .flex-column {
@@ -39,12 +43,11 @@ body {
   justify-content: center;
 }
 
-.justify-start {
-  justify-content: start;
-}
-
 .align-center {
   align-items: center;
 }
-
 /* Flex END */
+
+.title {
+  color: #4a4747;
+}
