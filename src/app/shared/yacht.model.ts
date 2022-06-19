@@ -1,27 +1,27 @@
 export class Yacht {
-  id: number;
   productName: string;
   productTagLine: string;
   productImg: string;
   description: string;
   dailyCost: number;
   onOffer: boolean;
+  id?: number;
 
   constructor(
-    id: number,
     productName: string,
     productTagLine: string,
     productImg: string,
     description: string,
     dailyCost: number,
-    onOffer: boolean
+    onOffer: boolean,
+    id?: number
   ) {
-    this.id = id;
     this.productName = productName;
     this.productTagLine = productTagLine;
     this.productImg = productImg;
     this.description = description;
     this.dailyCost = dailyCost;
     this.onOffer = onOffer;
+    this.id = id;
   }
 }

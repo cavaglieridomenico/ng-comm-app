@@ -50,11 +50,15 @@
     </div>
 
     <div class="flex-row space-between">
-      <button mat-raised-button color="primary" type="submit">
-        Update Yacht
-      </button>
+      <button mat-raised-button color="primary" type="submit">Add Yacht</button>
       <!-- <button (click)="onCreate()" type="submit">New Yacht</button> -->
       <!-- <button (click)="onDelete()" type="submit">Delete Yacht</button> -->
     </div>
   </form>
+  <div
+    class="modal flex-row justify-center align-center"
+    *ngIf="responseYachtMessage"
+  >
+    <p>{{ responseYachtMessage }}</p>
+  </div>
 </div>

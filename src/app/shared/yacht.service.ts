@@ -13,14 +13,24 @@ export class YachtService {
   private yachtList: Yacht[];
   yachtListUpdate = new EventEmitter<Yacht[]>();
 
+  responseYacht: Yacht;
+  responseyachtUpdate = new EventEmitter<Yacht>();
+
   fetchData() {
-    return this.http
-      .get(this.url, { observe: 'response' })
-      .subscribe((response) => {
-        const data: any = response.body;
-        this.yachtList = data;
-        this.yachtListUpdate.emit(data);
-      });
+    this.http.get(this.url, { observe: 'response' }).subscribe((response) => {
+      const data: any = response.body;
+      this.yachtList = data;
+      this.yachtListUpdate.emit(data);
+    });
+  }
+
+  fetchPostData(yacht: Yacht) {
+    this.responseYacht = null;
+    this.http.post(this.url, yacht).subscribe((response: Yacht) => {
+      this.responseYacht = response;
+      this.responseyachtUpdate.emit(response);
+      console.log(this.responseYacht);
+    });
   }
 
   getYachtList() {
