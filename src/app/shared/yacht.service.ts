@@ -30,4 +30,8 @@ export class YachtService {
   getYachtListFilter(list: Yacht[], offer: boolean) {
     return list.filter((item) => item.onOffer === offer);
   }
+
+  getYachtFindById(list: Yacht[], id: number) {
+    return list.find((item) => item.id === id);
+  }
 }

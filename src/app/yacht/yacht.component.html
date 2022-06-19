@@ -1,5 +1,5 @@
 <div class="container">
-  <main class="flex-column align-center yachts" [ngClass]="{ mt: yachtList }">
+  <main class="flex-column align-center yachts" [ngClass]="{ my: yachtList }">
     <h1 class="title">Yachts</h1>
     <section class="flex-row justify-center yacht-list">
       <div class="loading" *ngIf="!yachtList">
@@ -23,7 +23,9 @@
           <div *ngIf="false">
             <button mat-button color="accent">EDIT</button>
           </div>
-          <!-- <button mat-button>SHARE</button> -->
+          <a [routerLink]="['/edit', yacht.id]">
+            <button mat-button>EDIT</button>
+          </a>
         </mat-card-actions>
         <mat-card-footer>
           <mat-progress-bar mode="indeterminate"></mat-progress-bar>

@@ -21,7 +21,8 @@ body {
 
 main {
   min-height: 80vh;
-  background-color: aquamarine;
+  background-color: #303030;
+  padding-top: 1em;
 }
 /* wrappers END  */
 
@@ -49,5 +50,5 @@ main {
 /* Flex END */
 
 .title {
-  color: #4a4747;
+  color: #fefefe;
 }

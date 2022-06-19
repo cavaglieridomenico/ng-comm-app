@@ -13,6 +13,8 @@ import { YachtComponent } from './yacht/yacht.component';
 import { OffersComponent } from './offers/offers.component';
 import { EditYachtComponent } from './edit-yacht/edit-yacht.component';
 import { FooterComponent } from './footer/footer.component';
+import { YachtFormComponent } from './yacht-form/yacht-form.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -24,6 +26,7 @@ import { FooterComponent } from './footer/footer.component';
     OffersComponent,
     EditYachtComponent,
     FooterComponent,
+    YachtFormComponent,
   ],
   imports: [
     BrowserModule,
@@ -31,7 +34,9 @@ import { FooterComponent } from './footer/footer.component';
     HttpClientModule,
     BrowserAnimationsModule,
     MaterialModule,
+    ReactiveFormsModule,
   ],
+
   providers: [],
   bootstrap: [AppComponent],
 })
