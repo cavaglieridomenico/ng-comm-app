@@ -1,0 +1,101 @@
+[
+  {
+    "id": 1,
+    "productName": "Eclipse",
+    "productTagLine": "fast",
+    "productImg": "https://i0.wp.com/www.barcheamotore.com/wp-content/uploads/2020/02/MYEclipse-Frederikshavn-Denmark.jpeg?ssl=1",
+    "description": "Since 2010, the year of construction, Eclipse, the mega yacht of the Russian oil magnate Roman Abramovich, has dominated the ranking of the largest in the world for almost 5 years, before being sent to the low step of the podium by Azzam and Fulk Al Salamah . And many will remember that at the time of the launch of Azzam the headlines of the newspapers focused almost more on Abramovich, ousted from the first position, than on the yacht of the Emir of Abu Dhabi. The Russian entrepreneur has never hidden his passion for extreme luxury and Eclipse, from the German shipyard Blohm & Voss, fully represents the style of its owner. 162.50 long, it is decidedly less powerful than its rival Azzam, being able to count only on a quadruple MTU 10,000 horsepower engine which still allows Eclipse to reach the not inconsiderable speed of 25 knots. Missile systems, submarines, bulletproof glass and any other kind of luxury? Here you go, Eclipse!",
+    "dailyCost": 50000,
+    "onOffer": true
+  },
+
+  {
+    "id": 2,
+    "productName": "Dubai",
+    "productTagLine": "fast",
+    "productImg": "https://i0.wp.com/www.barcheamotore.com/wp-content/uploads/2018/07/Dubai-.jpg?ssl=1",
+    "description": "The yacht of Sheikh Mohammed bin Rashid Al Maktoum, emir, needless to say, of Dubai. Just 50 centimeters shorter than Eclipse, it was started in 1996 in Germany, at the Blohm & Voss shipyards in collaboration with Lürssen, for the Prince of the Sultanate of Brunei, Jefri Bolkiah. In 2001, the hull arrived in Dubai, where Platinum Yachts, behind which Sheikh Mohammed bin Rashid Al Maktoum is behind, took care of the completion of the works in 2005. The mosaic of stories and people who worked in the 9 years preceding the launch remains in the history of the yacht, whose interiors, curated by Andrew Winch, are the result of an intense research and refinement of detail with a peculiarity. The leitmotiv of the decorations are precisely the mosaics, omnipresent on board. With a top speed of 26 knots and a cruising speed of 25, Dubai is capable of running autonomously up to 8,000 consecutive miles, thanks to four 8450 horsepower MTU engines.",
+    "dailyCost": 60000,
+    "onOffer": false
+  },
+
+  {
+    "id": 3,
+    "productName": "Dilbar",
+    "productTagLine": "fast",
+    "productImg": "https://i2.wp.com/www.barcheamotore.com/wp-content/uploads/2018/07/al-said.jpg?ssl=1",
+    "description": "Mega yacht owned by another Russian businessman like Abramovich and also within a top English football club - Arsenal. We are talking about Alisher Usmanov, the Russian-Uzbek lord of metals, the first producer with his Metalloinvest. But back to the yacht: Dilbar is 156 meters long, but in terms of tonnage it is the largest in the world with its 15917 tons, and not even Azzam can compete with this titan, built by the German Lürssen in 2016. The engine is an electric diesel from 30,000 Kw, which makes Dilbar spin at 23 knots of maximum speed and 18 knots of cruising, a considerable speed given the weight of this mega yacht.",
+    "dailyCost": 40000,
+    "onOffer": true
+  },
+
+  {
+    "id": 4,
+    "productName": "Al Saïd",
+    "productTagLine": "fast",
+    "productImg": "https://i2.wp.com/www.barcheamotore.com/wp-content/uploads/2020/02/%E2%80%98A%E2%80%99-143-m-Nobiskrug.png?ssl=1",
+    "description": "Don't be fooled by the two chimneys and the superstructure of Al Said: you don't have a ferry in front of you! The taste for the imposing and very ferry superstructures of the Omani family is also reconfirmed in the little sister of Fulk Al Salamah which with its 155 meters is the sixth largest yacht in the world. Also here at the stern there is a huge platform for the landing of helicopters. This yacht, delivered in 2008 by the German Lürssen, with its 15,850 tons almost reaches the tonnage of Dilbar, weighing only 67 tons more. The very large interior volumes, edited by Redman Whiteley Dixon, are one of the characteristic features of Al Said, which is also equipped with two MTU engines of approximately 11,000 horsepower with which it manages to develop 22 knots of maximum speed.",
+    "dailyCost": 80000,
+    "onOffer": false
+  },
+
+  {
+    "id": 5,
+    "productName": "Golden Odyssey",
+    "productTagLine": "fast",
+    "productImg": "https://i2.wp.com/www.barcheamotore.com/wp-content/uploads/2020/02/golden-odissey.png?ssl=1",
+    "description": "Launched in 2015 by Lürssen, the 123.20 meter long Golden Odyssey is owned by Prince Khalid Bin Sultan, and is the largest yacht in his fleet. Known as the Tatiana project when it was under construction at the German shipyard, it was designed on the outside by Martin Francis, known for his pioneering use of glass walls, while on the inside by Alberto Pinto. She has a gross tonnage of 7,600 tons and is a Lloyds Register class yacht.",
+    "dailyCost": 55000,
+    "onOffer": true
+  },
+
+  {
+    "id": 6,
+    "productName": "Katara",
+    "productTagLine": "fast",
+    "productImg": "https://i2.wp.com/www.barcheamotore.com/wp-content/uploads/2020/02/katara.png?w=900&ssl=1",
+    "description": "Launched in 2010, Katara has an Espen Øino exterior and features a large helipad on the aft area and an open area on the bow. It can carry two tenders and a SOLAS rescue boat. The other decks offer some sun exposure, but most are protected. Few are the details of the interior of the late Alberto Pinto. According to sources, the owner of the yacht is the Emir of Qatar.",
+    "dailyCost": 45000,
+    "onOffer": false
+  },
+
+  {
+    "id": 7,
+    "productName": "Maryah",
+    "productTagLine": "fast",
+    "productImg": "https://i2.wp.com/www.barcheamotore.com/wp-content/uploads/2020/02/2017_Maryah_ship_2014_in_Barcelona.jpg?w=900&ssl=1",
+    "description": "Once a Russian research vessel, it was originally launched from the Szczecin shipyard in Poland. In 2010 she underwent a super refit at the Elefsis shipyard in Greece. From a research ship it has evolved into a modern custom built superyacht. UK-based H2 Yacht Design took care of both the interior and exterior. The swimming pool, the spa, the contemporary furnishings (including custom-made furniture, the signature carpentry) and a large interior space have transformed a work boat into one of the largest superyachts in the world. Maryah, which reaches a top speed of 18 knots with a twin Azipod, ABB's electric azimuth thruster.",
+    "dailyCost": 60000,
+    "onOffer": true
+  },
+
+  {
+    "id": 8,
+    "productName": "Octopus",
+    "productTagLine": "fast",
+    "productImg": "https://i0.wp.com/www.barcheamotore.com/wp-content/uploads/2020/02/octopus-superyacht.png?w=900&ssl=1",
+    "description": "Paul Allen, co-founder of Microsoft, had this superyacht built by Lürssen. Octopus has eight decks and is the largest explorer in the world. Basically a superyacht, with outbuildings and connected, capable of anchoring at the North Pole. This giant, delivered in 2003, has two helicopters, seven tenders, a large SUV and an internal dock with two submarines on board. An observation room with a glass bottom allows a spectacular view during navigation. Espen Øino designed the exterior, including a full-size basketball court on the aft deck, while Jonathan Quinn Barnett designed the interior. The yacht underwent a refit in 2019. It reaches a maximum speed of 20 knots.",
+    "dailyCost": 90000,
+    "onOffer": false
+  },
+
+  {
+    "id": 9,
+    "productName": "Al Mirqab",
+    "productTagLine": "fast",
+    "productImg": "https://i2.wp.com/www.barcheamotore.com/wp-content/uploads/2020/02/Al_Mirqab_Monaco_2009.jpg?w=900&ssl=1",
+    "description": "Launched in 2008, Al Mirqab was built for the former Prime Minister of Qatar under the supervision of Kusch Yachts at the German Peters Werft shipyard in Wewelsfleth. The exterior, designed by Tim Heywood, includes a long, navy blue hull with a white superstructure. The yacht's diesel-electric propulsion features azimuth pod propulsion and gives this superyacht a top speed in excess of 21 knots. Al Mirqab has cabins for 36 people and a crew of 45.",
+    "dailyCost": 100000,
+    "onOffer": true
+  },
+
+  {
+    "id": 10,
+    "productName": "Serene",
+    "productTagLine": "fast",
+    "productImg": "https://i2.wp.com/www.barcheamotore.com/wp-content/uploads/2020/02/Serene-133.8-m-Fincantieri.jpg?w=900&ssl=1",
+    "description": "Launched in 2008, Al Mirqab was built for the former Prime Minister of Qatar under the supervision of Kusch Yachts at the German Peters Werft shipyard in Wewelsfleth. The exterior, designed by Tim Heywood, includes a long, navy blue hull with a white superstructure. The yacht's diesel-electric propulsion features azimuth pod propulsion and gives this superyacht a top speed in excess of 21 knots. Al Mirqab has cabins for 36 people and a crew of 45.",
+    "dailyCost": 850000,
+    "onOffer": false
+  }
+]

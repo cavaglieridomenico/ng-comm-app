@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -14,10 +15,20 @@ import { EditYachtComponent } from './edit-yacht/edit-yacht.component';
 import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
-  declarations: [AppComponent, NavbarComponent, HeaderComponent, HomePageComponent, YachtComponent, OffersComponent, EditYachtComponent, FooterComponent],
+  declarations: [
+    AppComponent,
+    NavbarComponent,
+    HeaderComponent,
+    HomePageComponent,
+    YachtComponent,
+    OffersComponent,
+    EditYachtComponent,
+    FooterComponent,
+  ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    HttpClientModule,
     BrowserAnimationsModule,
     MaterialModule,
   ],

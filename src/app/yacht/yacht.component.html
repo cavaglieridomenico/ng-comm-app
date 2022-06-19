@@ -1,20 +1,24 @@
 <div class="container">
-  <main class="flex-column align-center">
-    <h1>Yachts</h1>
-    <section class="yacht-list">
-      <mat-card class="example-card" *ngFor="let yacht of yachtList">
+  <main class="flex-column align-center yachts" [ngClass]="{ mt: yachtList }">
+    <h1 class="title">Yachts</h1>
+    <section class="flex-row justify-center yacht-list">
+      <div class="loading" *ngIf="!yachtList">
+        <p>{{ errorMessageFetch }}</p>
+        <mat-progress-bar mode="indeterminate">Aiuto</mat-progress-bar>
+      </div>
+      <mat-card class="yacht-card" *ngFor="let yacht of yachtList">
         <mat-card-header>
           <mat-card-title> {{ yacht.productName }} </mat-card-title>
           <mat-card-subtitle>{{ yacht.productTagLine }}</mat-card-subtitle>
         </mat-card-header>
         <img mat-card-image src="{{ yacht.productImg }}" alt="productName" />
         <mat-card-content>
-          <p>
-            {{ yacht.description }}
-          </p>
+          <p class="description">{{ yacht.description }}</p>
         </mat-card-content>
         <p>Costo giornaliero : {{ yacht.dailyCost }}</p>
-        <p *ngIf="yacht.onOffer">IN OFFERTA</p>
+        <div class="offer">
+          <p *ngIf="yacht.onOffer">20% Off</p>
+        </div>
         <mat-card-actions>
           <div *ngIf="false">
             <button mat-button color="accent">EDIT</button>
@@ -25,6 +29,8 @@
           <mat-progress-bar mode="indeterminate"></mat-progress-bar>
         </mat-card-footer>
       </mat-card>
+      <!-- <div class="single-card-container" *ngFor="let yacht of yachtList"> -->
+      <!-- </div> -->
     </section>
   </main>
 </div>
