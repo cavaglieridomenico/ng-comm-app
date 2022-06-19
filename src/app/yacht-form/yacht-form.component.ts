@@ -25,10 +25,12 @@ export class YachtFormComponent implements OnInit {
   //   dailyCost: 50000,
   //   onOffer: true,
   // };
-
+  id: any;
   errorMessageFetch: string = 'Loading...';
 
   responseYachtMessage: string;
+
+  typeRequest: string;
 
   constructor(
     private yachtService: YachtService,
@@ -39,10 +41,10 @@ export class YachtFormComponent implements OnInit {
     //const id = 1;
 
     //Data
-    const id = +this.route.snapshot.params['id'];
+    this.id = +this.route.snapshot.params['id'];
     this.yacht = yachtService.getYachtFindById(
       yachtService.getYachtList(),
-      id | 1
+      this.id
     );
   }
 
@@ -65,14 +67,30 @@ export class YachtFormComponent implements OnInit {
       description: new FormControl(this.yacht.description),
       dailyCost: new FormControl(this.yacht.dailyCost),
       onOffer: new FormControl(this.yacht.onOffer),
+      id: new FormControl(this.yacht.id),
     });
 
     this.yachtService.responseyachtUpdate.subscribe(() => {
       console.log(this.yachtService.responseYacht);
       if (this.yachtService.responseYacht)
-        this.responseYachtMessage = 'Yacht successfully added to the Database.';
+        this.responseYachtMessage = 'Operation completed successfully.';
       setTimeout(() => this.router.navigate(['yachts']), 3000);
     });
+  }
+
+  onAddYacht() {
+    this.typeRequest = 'add';
+    console.log('ADD CLICK');
+  }
+
+  onDeleteYacht() {
+    this.typeRequest = 'delete';
+    console.log('DELETE CLICK');
+  }
+
+  onUpdateYacht() {
+    this.typeRequest = 'patch';
+    console.log('PATCH CLICK');
   }
 
   onSubmit() {
@@ -84,9 +102,18 @@ export class YachtFormComponent implements OnInit {
       this.yachtForm.get('dailyCost').value,
       this.yachtForm.get('onOffer').value
     );
-    this.yachtService.fetchPostData(newYacht);
+    switch (this.typeRequest) {
+      case 'add':
+        this.yachtService.fetchPostData(newYacht);
+        break;
+      case 'delete':
+        this.yachtService.fetchDeleteSingleData(this.id);
+        break;
+      case 'patch':
+        this.yachtService.fetchUpdateSingleData(this.id, newYacht);
+        break;
+      default:
+        return;
+    }
   }
-  // onUpdate() {}
-  // onCreate() {}
-  // onDelete() {}
 }

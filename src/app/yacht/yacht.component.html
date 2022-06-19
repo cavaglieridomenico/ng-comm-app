@@ -8,7 +8,9 @@
       </div>
       <mat-card class="yacht-card" *ngFor="let yacht of yachtList">
         <mat-card-header>
-          <mat-card-title> {{ yacht.productName }} </mat-card-title>
+          <mat-card-title>
+            {{ yacht.productName }} ({{ yacht.id }})
+          </mat-card-title>
           <mat-card-subtitle>{{ yacht.productTagLine }}</mat-card-subtitle>
         </mat-card-header>
         <img mat-card-image src="{{ yacht.productImg }}" alt="productName" />

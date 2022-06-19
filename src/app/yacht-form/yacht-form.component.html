@@ -2,6 +2,12 @@
   <form [formGroup]="yachtForm" (ngSubmit)="onSubmit()">
     <div>
       <mat-form-field appearance="fill">
+        <mat-label> Yacht id </mat-label>
+        <input matInput formControlName="id" [readonly]="true" />
+      </mat-form-field>
+    </div>
+    <div>
+      <mat-form-field appearance="fill">
         <mat-label> Yacht name </mat-label>
         <input matInput formControlName="productName" />
       </mat-form-field>
@@ -49,10 +55,31 @@
       </mat-form-field>
     </div>
 
-    <div class="flex-row space-between">
-      <button mat-raised-button color="primary" type="submit">Add Yacht</button>
-      <!-- <button (click)="onCreate()" type="submit">New Yacht</button> -->
-      <!-- <button (click)="onDelete()" type="submit">Delete Yacht</button> -->
+    <div class="flex-column align-center">
+      <button
+        mat-raised-button
+        color="primary"
+        type="submit"
+        (click)="onAddYacht()"
+      >
+        Add Yacht
+      </button>
+      <button
+        mat-raised-button
+        color="primary"
+        type="submit"
+        (click)="onDeleteYacht()"
+      >
+        Delete Yacht
+      </button>
+      <button
+        mat-raised-button
+        color="primary"
+        type="submit"
+        (click)="onUpdateYacht()"
+      >
+        Update Yacht
+      </button>
     </div>
   </form>
   <div
