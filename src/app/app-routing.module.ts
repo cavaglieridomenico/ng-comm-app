@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { EditYachtComponent } from './edit-yacht/edit-yacht.component';
 import { HomePageComponent } from './home-page/home-page.component';
 import { OffersComponent } from './offers/offers.component';
+import { YachtFormComponent } from './yacht-form/yacht-form.component';
 import { YachtComponent } from './yacht/yacht.component';
 
 const routes: Routes = [
@@ -21,6 +22,7 @@ const routes: Routes = [
   {
     path: 'edit',
     component: EditYachtComponent,
+    children: [{ path: ':id', component: YachtFormComponent }],
   },
 ];
 

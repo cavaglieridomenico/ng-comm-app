@@ -13,6 +13,7 @@ import { YachtComponent } from './yacht/yacht.component';
 import { OffersComponent } from './offers/offers.component';
 import { EditYachtComponent } from './edit-yacht/edit-yacht.component';
 import { FooterComponent } from './footer/footer.component';
+import { YachtFormComponent } from './yacht-form/yacht-form.component';
 
 @NgModule({
   declarations: [
@@ -24,6 +25,7 @@ import { FooterComponent } from './footer/footer.component';
     OffersComponent,
     EditYachtComponent,
     FooterComponent,
+    YachtFormComponent,
   ],
   imports: [
     BrowserModule,
