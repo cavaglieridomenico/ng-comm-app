@@ -15,7 +15,7 @@
         <mat-card-content>
           <p class="description">{{ yacht.description }}</p>
         </mat-card-content>
-        <p>Costo giornaliero : {{ yacht.dailyCost }}</p>
+        <p>Costo giornaliero : {{ yacht.dailyCost | currency: "EUR" }}</p>
         <div class="offer">
           <p *ngIf="yacht.onOffer">20% Off</p>
         </div>
@@ -31,8 +31,6 @@
           <mat-progress-bar mode="indeterminate"></mat-progress-bar>
         </mat-card-footer>
       </mat-card>
-      <!-- <div class="single-card-container" *ngFor="let yacht of yachtList"> -->
-      <!-- </div> -->
     </section>
   </main>
 </div>

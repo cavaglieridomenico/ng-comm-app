@@ -3,6 +3,7 @@
 html,
 body {
   height: 100%;
+  color: #fefefe;
 }
 body {
   margin: 0;
@@ -12,7 +13,7 @@ body {
 /* wrappers  */
 .app {
   height: 100vh;
-  min-width: 390px;
+  min-width: 320px;
 }
 
 .container {
