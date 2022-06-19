@@ -3,3 +3,12 @@
   flex-direction: column;
   align-items: flex-start;
 }
+
+.form-container {
+  margin: 3em 0;
+}
+
+.loading {
+  margin-top: 3em;
+  font-size: 1.5em;
+}
