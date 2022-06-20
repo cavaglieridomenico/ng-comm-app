@@ -5,7 +5,7 @@ export class Yacht {
   description: string;
   dailyCost: number;
   onOffer: boolean;
-  id?: number;
+  id?: string;
 
   constructor(
     productName: string,
@@ -14,7 +14,7 @@ export class Yacht {
     description: string,
     dailyCost: number,
     onOffer: boolean,
-    id?: number
+    id?: string
   ) {
     this.productName = productName;
     this.productTagLine = productTagLine;

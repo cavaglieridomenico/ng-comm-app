@@ -25,7 +25,7 @@ export class YachtFormComponent implements OnInit {
   //   dailyCost: 50000,
   //   onOffer: true,
   // };
-  id: any;
+  id: string;
   errorMessageFetch: string = 'Loading...';
 
   responseYachtMessage: string;
@@ -41,8 +41,8 @@ export class YachtFormComponent implements OnInit {
     //const id = 1;
 
     //Data
-    this.id = +this.route.snapshot.params['id'];
-    this.yacht = yachtService.getYachtFindById(
+    this.id = this.route.snapshot.params['id'];
+    this.yacht = this.yachtService.getYachtFindById(
       yachtService.getYachtList(),
       this.id
     );
@@ -94,13 +94,16 @@ export class YachtFormComponent implements OnInit {
   }
 
   onSubmit() {
+    const getOfferParse = () =>
+      this.yachtForm.get('onOffer').value === 'true' ? true : false;
+
     const newYacht = new Yacht(
       this.yachtForm.get('productName').value,
       this.yachtForm.get('productTagLine').value,
       this.yachtForm.get('productImg').value,
       this.yachtForm.get('description').value,
       this.yachtForm.get('dailyCost').value,
-      this.yachtForm.get('onOffer').value
+      getOfferParse()
     );
     switch (this.typeRequest) {
       case 'add':

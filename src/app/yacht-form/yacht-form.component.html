@@ -2,12 +2,6 @@
   <form [formGroup]="yachtForm" (ngSubmit)="onSubmit()">
     <div>
       <mat-form-field appearance="fill">
-        <mat-label> Yacht id </mat-label>
-        <input matInput formControlName="id" [readonly]="true" />
-      </mat-form-field>
-    </div>
-    <div>
-      <mat-form-field appearance="fill">
         <mat-label> Yacht name </mat-label>
         <input matInput formControlName="productName" />
       </mat-form-field>
@@ -49,8 +43,8 @@
       <mat-form-field appearance="fill">
         <mat-label>It's on offer? {{ yacht.onOffer }}</mat-label>
         <mat-select formControlName="onOffer">
-          <mat-option value="true"> Yes </mat-option>
-          <mat-option value="false"> No </mat-option>
+          <mat-option value="{{ true }}"> Yes </mat-option>
+          <mat-option value="{{ false }}"> No </mat-option>
         </mat-select>
       </mat-form-field>
     </div>

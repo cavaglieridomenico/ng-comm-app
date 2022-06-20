@@ -36,22 +36,20 @@ export class YachtService {
     });
   }
 
-  fetchDeleteSingleData(id: number) {
-    this.http.delete(`${this.urlMax}/?id=${id}`).subscribe((response: any) => {
+  fetchDeleteSingleData(id: string) {
+    this.http.delete(`${this.urlMax}/${id}`).subscribe((response: any) => {
       this.responseYacht = response;
       this.responseyachtUpdate.emit(response);
       console.log(this.responseYacht);
     });
   }
 
-  fetchUpdateSingleData(id: number, yacht: Yacht) {
-    this.http
-      .patch(`${this.urlMax}/${id}`, yacht)
-      .subscribe((response: any) => {
-        this.responseYacht = response;
-        this.responseyachtUpdate.emit(response);
-        console.log(this.responseYacht);
-      });
+  fetchUpdateSingleData(id: string, yacht: Yacht) {
+    this.http.put(`${this.urlMax}/${id}`, yacht).subscribe((response: any) => {
+      this.responseYacht = response;
+      this.responseyachtUpdate.emit(response);
+      console.log(this.responseYacht);
+    });
   }
 
   getYachtList() {
@@ -62,7 +60,7 @@ export class YachtService {
     return list.filter((item) => item.onOffer === offer);
   }
 
-  getYachtFindById(list: Yacht[], id: number) {
+  getYachtFindById(list: Yacht[] = [], id: string = '1') {
     return list.find((item) => item.id === id);
   }
 }

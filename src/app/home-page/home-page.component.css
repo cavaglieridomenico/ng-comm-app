@@ -27,3 +27,11 @@ p {
     font-size: 60px;
   }
 }
+
+@media (min-width: 1600px) {
+  main {
+    background-size: 70% 100%;
+    background-repeat: no-repeat;
+    background-color: unset;
+  }
+}
