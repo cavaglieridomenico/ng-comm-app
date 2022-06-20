@@ -5,10 +5,34 @@
 }
 
 .form-container {
+  position: relative;
   margin: 3em 0;
 }
 
 .loading {
   margin-top: 3em;
   font-size: 1.5em;
+}
+
+button {
+  margin: 0.2em 0;
+}
+
+.modal {
+  background-color: #9b27b0d7;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  height: 100%;
+  font-size: 30px;
+  line-height: 1.2em;
+  text-align: center;
+}
+@media (min-width: 576px) {
+  .modal {
+    width: 80%;
+    padding: 0 1em;
+    transform: scaleX(1.2);
+  }
 }

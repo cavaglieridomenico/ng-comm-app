@@ -1,1 +1,37 @@
+main {
+  background-image: url("https://i2.wp.com/www.barcheamotore.com/wp-content/uploads/2020/02/katara.png?w=900&ssl=1");
+  background-size: 100%;
+  background-position: center;
+}
 
+p {
+  background-color: #303030;
+  width: 250px;
+  height: 50px;
+  padding-top: 20px;
+  text-align: center;
+  font-size: 30px;
+  margin-top: 1.1em;
+}
+
+@media (min-width: 576px) {
+  main {
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+  }
+
+  p {
+    background-color: transparent;
+    width: unset;
+    height: unset;
+    font-size: 60px;
+  }
+}
+
+@media (min-width: 1600px) {
+  main {
+    background-size: 70% 100%;
+    background-repeat: no-repeat;
+    background-color: unset;
+  }
+}

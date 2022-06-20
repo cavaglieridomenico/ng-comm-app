@@ -43,18 +43,43 @@
       <mat-form-field appearance="fill">
         <mat-label>It's on offer? {{ yacht.onOffer }}</mat-label>
         <mat-select formControlName="onOffer">
-          <mat-option value="true"> Yes </mat-option>
-          <mat-option value="false"> No </mat-option>
+          <mat-option value="{{ true }}"> Yes </mat-option>
+          <mat-option value="{{ false }}"> No </mat-option>
         </mat-select>
       </mat-form-field>
     </div>
 
-    <div class="flex-row space-between">
-      <button mat-raised-button color="primary" type="submit">
+    <div class="flex-column align-center">
+      <button
+        mat-raised-button
+        color="primary"
+        type="submit"
+        (click)="onAddYacht()"
+      >
+        Add Yacht
+      </button>
+      <button
+        mat-raised-button
+        color="primary"
+        type="submit"
+        (click)="onDeleteYacht()"
+      >
+        Delete Yacht
+      </button>
+      <button
+        mat-raised-button
+        color="primary"
+        type="submit"
+        (click)="onUpdateYacht()"
+      >
         Update Yacht
       </button>
-      <!-- <button (click)="onCreate()" type="submit">New Yacht</button> -->
-      <!-- <button (click)="onDelete()" type="submit">Delete Yacht</button> -->
     </div>
   </form>
+  <div
+    class="modal flex-row justify-center align-center"
+    *ngIf="responseYachtMessage"
+  >
+    <p>{{ responseYachtMessage }}</p>
+  </div>
 </div>
