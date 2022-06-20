@@ -18,4 +18,8 @@ export class YachtComponent implements OnInit {
       this.yachtList = this.yachtService.getYachtList();
     });
   }
+
+  onSetSingleItem(id: string) {
+    this.yachtService.setYachtById(id);
+  }
 }
