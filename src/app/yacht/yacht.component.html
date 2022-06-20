@@ -25,7 +25,10 @@
           <div *ngIf="false">
             <button mat-button color="accent">EDIT</button>
           </div>
-          <a [routerLink]="['/edit', yacht.id]">
+          <a
+            (click)="onSetSingleItem(yacht.id)"
+            [routerLink]="['/edit', yacht.id]"
+          >
             <button mat-button>EDIT</button>
           </a>
         </mat-card-actions>

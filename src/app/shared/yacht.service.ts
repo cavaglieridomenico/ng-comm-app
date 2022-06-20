@@ -17,6 +17,19 @@ export class YachtService {
   responseYacht: Yacht;
   responseyachtUpdate = new EventEmitter<Yacht>();
 
+  setLocalStorage(nameData: string, data: any) {
+    localStorage.setItem(nameData, JSON.stringify(data));
+  }
+
+  getLocalStorage(nameData: string) {
+    const singleYacht = localStorage.getItem(nameData);
+    if (singleYacht) {
+      return JSON.parse(localStorage.getItem(nameData));
+    } else {
+      return null;
+    }
+  }
+
   fetchData() {
     this.http
       .get(this.urlMax, { observe: 'response' })
@@ -24,6 +37,7 @@ export class YachtService {
         const data: any = response.body;
         this.yachtList = data;
         this.yachtListUpdate.emit(data);
+        this.setLocalStorage('yachtList', data);
       });
   }
 
@@ -32,7 +46,6 @@ export class YachtService {
     this.http.post(this.urlMax, yacht).subscribe((response: Yacht) => {
       this.responseYacht = response;
       this.responseyachtUpdate.emit(response);
-      console.log(this.responseYacht);
     });
   }
 
@@ -40,7 +53,6 @@ export class YachtService {
     this.http.delete(`${this.urlMax}/${id}`).subscribe((response: any) => {
       this.responseYacht = response;
       this.responseyachtUpdate.emit(response);
-      console.log(this.responseYacht);
     });
   }
 
@@ -48,7 +60,6 @@ export class YachtService {
     this.http.put(`${this.urlMax}/${id}`, yacht).subscribe((response: any) => {
       this.responseYacht = response;
       this.responseyachtUpdate.emit(response);
-      console.log(this.responseYacht);
     });
   }
 
@@ -60,7 +71,12 @@ export class YachtService {
     return list.filter((item) => item.onOffer === offer);
   }
 
-  getYachtFindById(list: Yacht[] = [], id: string = '1') {
-    return list.find((item) => item.id === id);
+  setYachtById(id: string = '1') {
+    const yacht = this.yachtList.find((item) => item.id === id);
+    this.setLocalStorage('singleYacht', yacht);
+  }
+
+  getYachtById(id: string = '1'): Yacht {
+    return this.getLocalStorage('singleYacht');
   }
 }
