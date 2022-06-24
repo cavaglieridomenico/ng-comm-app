@@ -3,7 +3,10 @@
     <div class="navbar-container">
       <app-navbar></app-navbar>
     </div>
-    <div class="switch-container flex-column justify-center">
+    <div
+      *ngIf="isYachtsPage"
+      class="switch-container flex-column justify-center"
+    >
       <app-switch-guest-admin></app-switch-guest-admin>
     </div>
   </div>
