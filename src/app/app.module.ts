@@ -14,7 +14,8 @@ import { OffersComponent } from './offers/offers.component';
 import { EditYachtComponent } from './edit-yacht/edit-yacht.component';
 import { FooterComponent } from './footer/footer.component';
 import { YachtFormComponent } from './yacht-form/yacht-form.component';
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { SwitchGuestAdminComponent } from './header/switch-guest-admin/switch-guest-admin.component';
 
 @NgModule({
   declarations: [
@@ -27,6 +28,7 @@ import { ReactiveFormsModule } from '@angular/forms';
     EditYachtComponent,
     FooterComponent,
     YachtFormComponent,
+    SwitchGuestAdminComponent,
   ],
   imports: [
     BrowserModule,
@@ -34,6 +36,7 @@ import { ReactiveFormsModule } from '@angular/forms';
     HttpClientModule,
     BrowserAnimationsModule,
     MaterialModule,
+    FormsModule,
     ReactiveFormsModule,
   ],
 
