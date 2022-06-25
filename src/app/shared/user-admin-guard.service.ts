@@ -15,7 +15,8 @@ export class UserAdminGuardService implements CanActivate {
     if (this.userAdminService.isUserAdmin) {
       return true;
     } else {
-      this.router.navigate(['/']);
+      this.router.navigate(['/yachts']);
+      window.scrollTo(0, 0);
       return false;
     }
   }
