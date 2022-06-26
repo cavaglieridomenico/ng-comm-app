@@ -16,6 +16,7 @@ import { FooterComponent } from './footer/footer.component';
 import { YachtFormComponent } from './yacht-form/yacht-form.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { SwitchGuestAdminComponent } from './header/switch-guest-admin/switch-guest-admin.component';
+import { AlertComponent } from './alert/alert.component';
 
 @NgModule({
   declarations: [
@@ -29,6 +30,7 @@ import { SwitchGuestAdminComponent } from './header/switch-guest-admin/switch-gu
     FooterComponent,
     YachtFormComponent,
     SwitchGuestAdminComponent,
+    AlertComponent,
   ],
   imports: [
     BrowserModule,

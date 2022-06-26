@@ -1,0 +1,9 @@
+<div class="container alert-container flex-row align-center">
+  <div
+    *ngIf="alert.alertShow"
+    class="alert"
+    [ngStyle]="{ 'background-color': alert.alertColor }"
+  >
+    <span>{{ alert.alertMessage }}</span>
+  </div>
+</div>
