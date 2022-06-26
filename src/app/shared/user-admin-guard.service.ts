@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Router, CanActivate } from '@angular/router';
+import { AlertService } from '../alert/alert.service';
 import { UserAdminService } from './user-admin.service';
 
 @Injectable({
@@ -8,7 +9,8 @@ import { UserAdminService } from './user-admin.service';
 export class UserAdminGuardService implements CanActivate {
   constructor(
     private userAdminService: UserAdminService,
-    private router: Router
+    private router: Router,
+    private alertService: AlertService
   ) {}
 
   canActivate(): boolean {
@@ -17,6 +19,7 @@ export class UserAdminGuardService implements CanActivate {
     } else {
       this.router.navigate(['/yachts']);
       window.scrollTo(0, 0);
+      this.alertService.setShowAlert();
       return false;
     }
   }
