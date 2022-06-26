@@ -1,0 +1,12 @@
+.container.alert-container {
+  height: 3.5vh;
+  margin: 0.2vh 0;
+}
+
+.alert {
+  width: fit-content;
+  margin: auto;
+  padding: 0.8em;
+  border-radius: 16px;
+  margin: 0 auto;
+}
