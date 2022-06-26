@@ -1,4 +1,8 @@
 /* You can add global styles to this file, and also import other style files */
+:root {
+  --container-paddingX: 10%;
+  --container-paddingY: 0;
+}
 
 html,
 body {
@@ -17,7 +21,8 @@ body {
 }
 
 .container {
-  padding: 0 10%;
+  position: relative;
+  padding: var(--container-paddingY) var(--container-paddingX);
 }
 
 main {
