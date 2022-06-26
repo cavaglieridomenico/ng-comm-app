@@ -1,6 +1,5 @@
-import { Location } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { Router, Event, NavigationEnd } from '@angular/router';
 
 @Component({
   selector: 'app-header',
@@ -8,14 +7,21 @@ import { ActivatedRoute } from '@angular/router';
   styleUrls: ['./header.component.css'],
 })
 export class HeaderComponent implements OnInit {
-  currentUrl: any;
   isYachtsPage: boolean;
-  constructor(private route: ActivatedRoute, private location: Location) {}
+  currentRoute: string;
 
-  ngOnInit(): void {
-    this.currentUrl = this.location.path();
-    console.log(this.currentUrl);
-    this.isYachtsPage = this.currentUrl === '/yachts';
-    console.log(this.isYachtsPage);
+  constructor(private router: Router) {
+    this.router.events.subscribe((event: Event) => {
+      if (event instanceof NavigationEnd) {
+        this.currentRoute = event.url;
+        if (this.currentRoute === '/yachts') {
+          this.isYachtsPage = true;
+        } else {
+          this.isYachtsPage = false;
+        }
+      }
+    });
   }
+
+  ngOnInit(): void {}
 }
