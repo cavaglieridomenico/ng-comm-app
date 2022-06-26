@@ -20,7 +20,7 @@ export class AlertService {
 
   setShowAlert(
     message: string = 'Please, switch to Admin.',
-    color: string = '#9c27b0'
+    color: string = 'var(--color-primary)'
   ) {
     this.alert.alertMessage = message;
     this.alert.alertColor = color;
