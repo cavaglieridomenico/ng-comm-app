@@ -1,13 +1,9 @@
-/* You can add global styles to this file, and also import other style files */
-:root {
-  --container-paddingX: 10%;
-  --container-paddingY: 0;
-}
+@import "./assets/style/common.css";
 
 html,
 body {
   height: 100%;
-  color: #fefefe;
+  color: var(--color-text);
 }
 body {
   margin: 0;
@@ -26,10 +22,11 @@ body {
 }
 
 main {
-  min-height: 80vh;
-  background-color: #303030;
+  min-height: var(--main-height);
+  background-color: var(--color-main-background);
   padding-top: 1em;
 }
+
 /* wrappers END  */
 
 /* Flex */
@@ -54,7 +51,3 @@ main {
   align-items: center;
 }
 /* Flex END */
-
-.title {
-  color: #fefefe;
-}

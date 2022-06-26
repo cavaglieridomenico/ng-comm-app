@@ -1,11 +1,5 @@
 footer {
-  background-color: #9c27b0;
-  height: 7.5vh;
-}
-
-.logo,
-.user {
-  width: 40px;
-  height: 40px;
-  background-color: cyan;
+  background-color: var(--color-primary);
+  height: var(--footer-height);
+  margin-top: var(--footer-margin-top);
 }

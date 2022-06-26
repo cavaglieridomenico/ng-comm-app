@@ -1,6 +1,6 @@
 header {
-  min-height: 7.5vh;
-  background-color: #9c27b0;
+  min-height: var(--header-height);
+  background-color: var(--color-primary);
 }
 
 .switch-container {
@@ -10,4 +10,10 @@ header {
   z-index: 1;
   margin-right: var(--container-paddingX);
   height: 100%;
+}
+
+@media (min-width: 576px) {
+  .container.header-container {
+    justify-content: center;
+  }
 }
