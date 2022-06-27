@@ -1,138 +1,67 @@
+main.home-page {
+  background: linear-gradient(
+    to bottom,
+    var(--color-primary),
+    var(--color-main-background)
+  );
+}
+
 section.home-page {
-  position: relative;
-  height: calc(var(--main-height) - 122px);
-  padding: 1em 0;
+  height: var(--main-height);
 }
 
 .title-container {
-  background-image: url("../../assets/images/sea-background.png");
-  background-size: cover;
-  height: 90px;
-}
-.home-title {
-  font-size: 40px;
-  margin-bottom: 0;
+  width: 100%;
+  height: 70px;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  z-index: 1;
 }
 
-.home-content-container {
-  width: 100%;
+.home-title {
+  font-size: 20px;
+  margin-bottom: 5vh;
+}
+
+.home-content-central {
+  margin-bottom: 8vh;
 }
 
 .img-container {
-  width: 100%;
-  height: 100%;
+  display: flex;
+  justify-content: center;
+  background-color: #0f0f0f53;
 }
 
 .img-container img {
-  width: 100%;
-  height: auto;
-}
-
-.home-content-container-middle,
-.home-content-container-bottom {
-  position: absolute;
-  left: 0;
-  width: 100%;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-}
-
-.home-content-container-middle {
-  background-image: url("../../assets/images/drink-crop.jpg");
-  top: 40%;
-  z-index: 2;
-  height: 10vh;
-  border-top: 1em solid var(--color-main-background);
-  border-bottom: 1em solid var(--color-main-background);
-}
-
-.home-content-container-bottom {
-  background-image: url("../../assets/images/marina-olbia-crop.jpg");
-  bottom: 1em;
-  z-index: 1;
-  height: 20vh;
+  max-width: 90%;
+  max-height: 60vh;
+  border-radius: 100%;
+  border: solid 2px var(--color-primary);
+  box-shadow: 12px 24px 15px 13px #00000080;
 }
 
 @media (min-width: 576px) {
-  section.home-page {
-    height: calc(var(--main-height) - 152px);
-  }
-  .title-container {
-    height: 120px;
-  }
-
   .home-title {
-    font-size: 60px;
-  }
-  .home-content-container-middle {
-    height: 15vh;
-    top: 35%;
-  }
-}
-
-@media (min-width: 576px) and (max-height: 800px) {
-  .app {
-    height: 100%;
-  }
-  section.home-page {
-    height: unset;
-  }
-  .title-container {
-    height: 40px;
+    margin-top: 2vh;
   }
   .home-title {
-    font-size: 20px;
-  }
-  .img-container {
-    width: 100%;
-    margin: auto;
-  }
-  .home-content-container-middle,
-  .home-content-container-bottom {
-    display: none;
+    font-size: 25px;
   }
 }
 
 @media (min-width: 992px) {
-  .home-content-container-middle {
-    height: 15vh;
-    top: 45%;
+  .home-title {
+    margin-top: 5vh;
+  }
+  .home-title {
+    font-size: 50px;
   }
 }
 
 @media (min-width: 1200px) {
-  .home-content-container.first {
-    height: 100%;
-  }
-  .home-content-container-middle {
-    top: unset;
-    bottom: 0;
-    height: 15vh;
-  }
-  .home-content-container-bottom {
-    display: none;
-  }
-}
-
-@media (min-width: 1600px) {
-  .img-container {
-    width: 75%;
-    margin: auto;
-  }
-}
-
-@media (min-width: 1920px) {
-  .img-container {
-    width: fit-content;
-    margin: auto;
-  }
-  .img-container img {
-    width: auto;
-    height: 100%;
-  }
-  .home-content-container-middle {
-    height: 10vh;
-    background-position: 0 -160px;
+  .home-title {
+    margin-top: 10vh;
   }
 }
