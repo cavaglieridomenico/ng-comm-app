@@ -3,3 +3,24 @@ footer {
   height: var(--footer-height);
   margin-top: var(--footer-margin-top);
 }
+
+.text-center {
+  text-align: center;
+}
+
+.containerFooter {
+  margin-right: 2vw;
+  margin-left: 2vw;
+  margin-top: 2vh; /* margin-top: 1vh; */
+}
+
+@media (min-width: 1920px) {
+  .imgFooter {
+    height: 64px;
+    width: 64px;
+  }
+  .spanFooter {
+    margin-top: 0.71vh;
+    font-size: 64px;
+  }
+}
