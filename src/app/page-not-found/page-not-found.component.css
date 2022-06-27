@@ -1,0 +1,31 @@
+img {
+  height: 50vh;
+  width: 60vw;
+  justify-content: center;
+}
+@media (max-width: 576px) {
+  img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 70vw;
+    height: 43vh;
+  }
+  .btnBack {
+    margin-bottom: 0.5vh;
+    margin-top: 1vh;
+  }
+}
+
+.text-error {
+  color: var(--color-primary);
+  text-align: center;
+  font-size: 3em;
+}
+.text-center {
+  text-align: center;
+}
+.btnBack {
+  margin-top: 2vh;
+  text-align: center;
+}
