@@ -17,6 +17,7 @@ import { YachtFormComponent } from './yacht-form/yacht-form.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { SwitchGuestAdminComponent } from './header/switch-guest-admin/switch-guest-admin.component';
 import { AlertComponent } from './alert/alert.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 @NgModule({
   declarations: [
@@ -31,6 +32,7 @@ import { AlertComponent } from './alert/alert.component';
     YachtFormComponent,
     SwitchGuestAdminComponent,
     AlertComponent,
+    PageNotFoundComponent,
   ],
   imports: [
     BrowserModule,
