@@ -24,7 +24,7 @@ form {
 
 button {
   margin: 0.4em 0;
-  width: 40%;
+  width: 60%;
 }
 
 button:hover {
@@ -49,13 +49,15 @@ button:hover {
     padding: 0 1em;
     transform: scaleX(1.2);
   }
+  button {
+    width: 40%;
+  }
 }
 
 @media (min-width: 1400px) {
   form {
     width: 60%;
   }
-
   button {
     width: 30%;
   }
