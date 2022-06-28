@@ -32,8 +32,7 @@
   <a href="#pushpin-about">About</a> &#xa0; | &#xa0; 
   <a href="#pushpin-technologies">Technologies</a> &#xa0; | &#xa0;
   <a href="#pushpin-requirements">Requirements</a> &#xa0; | &#xa0;
-  <a href="#memo-license">License</a> &#xa0; | &#xa0;
-  <a href="https://github.com/cavaglieridomenico" target="_blank">Author</a>
+  <a href="#memo-license">License</a> &#xa0;
 </p>
 
 <br>
