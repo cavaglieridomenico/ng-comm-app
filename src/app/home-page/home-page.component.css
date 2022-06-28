@@ -39,7 +39,7 @@ section.home-page {
   max-height: 60vh;
   border-radius: 100%;
   border: solid 2px var(--color-primary);
-  box-shadow: 12px 24px 15px 13px #00000080;
+  box-shadow: 4px 15px 15px 8px #00000080;
 }
 
 @media (min-width: 576px) {
@@ -48,6 +48,9 @@ section.home-page {
   }
   .home-title {
     font-size: 25px;
+  }
+  .img-container img {
+    box-shadow: 12px 24px 15px 13px #00000080;
   }
 }
 
