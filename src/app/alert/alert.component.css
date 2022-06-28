@@ -1,6 +1,6 @@
 .container.alert-container {
   height: var(--alert-height);
-  margin: 1.5vh 0;
+  margin: 5px 0;
 }
 
 .alert {
@@ -9,10 +9,4 @@
   padding: 0.8em;
   border-radius: 16px;
   margin: 0 auto;
-}
-
-@media (min-width: 576px) {
-  .container.alert-container {
-    margin: 0.2vh 0;
-  }
 }
