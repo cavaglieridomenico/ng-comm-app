@@ -36,3 +36,7 @@
 section.yacht-list img {
   height: 300px;
 }
+
+.mt-5 {
+  margin-top: 3vh;
+}

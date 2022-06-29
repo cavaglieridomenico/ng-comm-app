@@ -3,6 +3,7 @@
     *ngIf="alert.alertShow"
     class="alert"
     [ngStyle]="{ 'background-color': alert.alertColor }"
+    [ngClass]="{ 'mt-5': isYachtsPage }"
   >
     <span>{{ alert.alertMessage }}</span>
   </div>

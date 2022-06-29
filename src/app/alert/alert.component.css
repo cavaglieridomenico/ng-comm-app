@@ -10,3 +10,13 @@
   border-radius: 16px;
   margin: 0 auto;
 }
+
+.mt-5 {
+  margin-top: 7vh;
+}
+
+@media (min-width: 576px) {
+  .mt-5 {
+    margin-top: 12vh;
+  }
+}
