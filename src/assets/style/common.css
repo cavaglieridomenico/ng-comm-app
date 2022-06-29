@@ -2,7 +2,7 @@
   --container-paddingX: 3vw;
   --container-paddingY: 0;
   --header-height: 10vh;
-  --alert-height: 3.5vh;
+  --alert-height: 40px;
   --main-height: 70vh;
   --main-margin-bottom: var(--alert-height);
   --footer-height: 10vh;
