@@ -68,3 +68,9 @@ section.home-page {
     margin-top: 10vh;
   }
 }
+
+@media (orientation: landscape) and (max-width: 900px) {
+  .container {
+    margin-top: 10vh;
+  }
+}

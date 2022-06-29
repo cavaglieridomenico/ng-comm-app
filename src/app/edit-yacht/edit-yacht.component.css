@@ -1,5 +1,11 @@
-.mt {
-  margin: 3vh 0;
+.mt-5 {
+  margin-top: 12vh;
+}
+
+@media (min-width: 576px) {
+  .mt-5 {
+    margin-top: 8vh;
+  }
 }
 
 section.edit-yacht {

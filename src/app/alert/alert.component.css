@@ -12,11 +12,17 @@
 }
 
 .mt-5 {
-  margin-top: 7vh;
+  margin-top: 20vh;
 }
 
 @media (min-width: 576px) {
   .mt-5 {
-    margin-top: 12vh;
+    margin-top: 16vh;
+  }
+}
+
+@media (orientation: landscape) and (max-width: 900px) {
+  .mt-5 {
+    margin-top: 30vh;
   }
 }
