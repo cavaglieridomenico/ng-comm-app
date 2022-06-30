@@ -74,10 +74,10 @@
       Update Yacht
     </button>
   </div>
+  <div
+    class="modal flex-row justify-center align-center"
+    *ngIf="responseYachtMessage"
+  >
+    <p>{{ responseYachtMessage }}</p>
+  </div>
 </form>
-<div
-  class="modal flex-row justify-center align-center"
-  *ngIf="responseYachtMessage"
->
-  <p>{{ responseYachtMessage }}</p>
-</div>
