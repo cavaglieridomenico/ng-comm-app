@@ -3,12 +3,18 @@
     <mat-form-field appearance="fill">
       <mat-label> Yacht name </mat-label>
       <input matInput formControlName="productName" />
+      <mat-hint *ngIf="!yachtForm.get('productName').valid"
+        >Required field</mat-hint
+      >
     </mat-form-field>
   </div>
   <div>
     <mat-form-field appearance="fill">
       <mat-label> Yacht tag line </mat-label>
       <input matInput formControlName="productTagLine" />
+      <mat-hint *ngIf="!yachtForm.get('productTagLine').valid"
+        >Required field</mat-hint
+      >
     </mat-form-field>
   </div>
 
@@ -16,6 +22,9 @@
     <mat-form-field appearance="fill">
       <mat-label> Yacht image URL</mat-label>
       <input matInput formControlName="productImg" />
+      <mat-hint *ngIf="!yachtForm.get('productImg').valid"
+        >Required field</mat-hint
+      >
     </mat-form-field>
   </div>
 
@@ -28,28 +37,35 @@
         cols="5"
         formControlName="description"
       ></textarea>
+      <mat-hint *ngIf="!yachtForm.get('description').valid"
+        >Required field</mat-hint
+      >
     </mat-form-field>
   </div>
 
   <div>
     <mat-form-field appearance="fill">
       <mat-label> Yacht daily cost</mat-label>
-      <input matInput formControlName="dailyCost" />
+      <input matInput formControlName="dailyCost" type="number" />
+      <mat-hint *ngIf="!yachtForm.get('dailyCost').valid"
+        >Required field</mat-hint
+      >
     </mat-form-field>
   </div>
 
   <div>
     <mat-form-field appearance="fill">
-      <mat-label>It's on offer? {{ yacht.onOffer }}</mat-label>
+      <mat-label>It's on offer?</mat-label>
       <mat-select formControlName="onOffer">
-        <mat-option value="{{ true }}"> Yes </mat-option>
-        <mat-option value="{{ false }}"> No </mat-option>
+        <mat-option value="yes"> Yes </mat-option>
+        <mat-option value="no"> No </mat-option>
       </mat-select>
     </mat-form-field>
   </div>
 
   <div class="flex-column align-center">
     <button
+      [disabled]="!yachtForm.valid"
       mat-raised-button
       color="primary"
       type="submit"
@@ -66,6 +82,7 @@
       Delete Yacht
     </button>
     <button
+      [disabled]="!yachtForm.valid"
       mat-raised-button
       color="primary"
       type="submit"

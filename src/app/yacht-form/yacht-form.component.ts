@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl, FormGroup } from '@angular/forms';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
+import { AlertService } from '../alert/alert.service';
 import { Yacht } from '../shared/yacht.model';
 import { YachtService } from '../shared/yacht.service';
 
@@ -11,7 +12,6 @@ import { YachtService } from '../shared/yacht.service';
 })
 export class YachtFormComponent implements OnInit {
   yachtForm: FormGroup;
-
   yacht: Yacht;
 
   errorMessageFetch: string = 'Loading...';
@@ -20,7 +20,11 @@ export class YachtFormComponent implements OnInit {
 
   typeRequest: string;
 
-  constructor(private yachtService: YachtService, private router: Router) {
+  constructor(
+    private yachtService: YachtService,
+    private router: Router,
+    private alertService: AlertService
+  ) {
     this.yacht = this.yachtService.getYachtById();
   }
 
@@ -28,15 +32,21 @@ export class YachtFormComponent implements OnInit {
     this.yachtService.fetchData();
 
     this.yachtForm = new FormGroup({
-      productName: new FormControl(this.yacht.productName),
-      productTagLine: new FormControl(this.yacht.productTagLine),
-      productImg: new FormControl(this.yacht.productImg),
-      description: new FormControl(this.yacht.description),
-      dailyCost: new FormControl(this.yacht.dailyCost),
-      onOffer: new FormControl(this.yacht.onOffer),
+      productName: new FormControl(this.yacht.productName, Validators.required),
+      productTagLine: new FormControl(
+        this.yacht.productTagLine,
+        Validators.required
+      ),
+      productImg: new FormControl(this.yacht.productImg, Validators.required),
+      description: new FormControl(this.yacht.description, Validators.required),
+      dailyCost: new FormControl(this.yacht.dailyCost, Validators.required),
+      onOffer: new FormControl(this.yacht.onOffer ? 'yes' : 'no'),
       id: new FormControl(this.yacht.id),
     });
-
+    this.yachtForm.valueChanges.subscribe(() => {
+      !this.yachtForm.valid &&
+        this.alertService.setShowAlert('All fields are required.');
+    });
     this.yachtService.responseyachtUpdate.subscribe(() => {
       if (this.yachtService.responseYacht)
         this.responseYachtMessage = 'Operation completed successfully.';
@@ -58,7 +68,7 @@ export class YachtFormComponent implements OnInit {
 
   onSubmit() {
     const getOfferParse = () =>
-      this.yachtForm.get('onOffer').value === 'true' ? true : false;
+      this.yachtForm.get('onOffer').value === 'yes' ? true : false;
 
     const newYacht = new Yacht(
       this.yachtForm.get('productName').value,
