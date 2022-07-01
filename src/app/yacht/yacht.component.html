@@ -22,9 +22,6 @@
           <p *ngIf="yacht.onOffer">20% Off</p>
         </div>
         <mat-card-actions>
-          <div *ngIf="false">
-            <button mat-button color="accent">EDIT</button>
-          </div>
           <a
             (click)="onSetSingleItem(yacht.id)"
             [routerLink]="['/edit', yacht.id]"
